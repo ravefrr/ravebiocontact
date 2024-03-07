@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #191919; /* Change to a valid background color */
+    color: #ededed;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00A9FF;
+}
+
+.home {
+    height: 100vh;
+    background: #191919; /* Changed background color for visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home img {
+    width: 300px; /* Adjust the width of the image */
+    height: 300px; /* Adjust the height of the image */
+    border-radius: 50%; /* Make the image round */
+    position: absolute;
+    top: 15%;
+    left: 41%;
+    transform: translate(-50%, -50%); /* Center the image */
+    z-index: 5; /* Ensure it's above other elements */
+    cursor: none; /* Allow dragging */
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.home .home-content {
+    max-width: 600px;
+    z-index: 5; /* Ensure it's below the image */
+}
+
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    top: 80px;
+    right: -20px;
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3 {
+    top: 90px;
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    color: #00A9FF;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.home-content p {
+    position: relative;
+    font-size: 15px;
+    margin: 20px 0 40px;
+    font-weight: 400;
+    top: 73px;
+    right: -158px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00A9FF;
+    border: 2px solid #00A9FF;
+    border-radius: 20px;
+    font-size: 17px;
+    color: #191919;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box :nth-child(2) {
+    background: transparent;
+    color: #00A9FF;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.btn-box a:hover {
+    color: #00A9FF;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00A9FF;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #191919;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 50px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-sci::before {
+    position: relative;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+
+    z-index: 2;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    top: -150px;
+    width: 120px;
+    height: 120px;
+    background: transparent;
+    border: 2px solid #00A9FF;
+    border-radius: 50%;
+    font-size: 70px;
+    color: #00A9FF;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #191919;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00A9FF;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background: transparent;
+    transform: translate(-50%, -50%); /* Center the hover area */
+    transition: 3s;
+    pointer-events: none;
+    z-index: 1; /* Ensure it's below the image */
+    border-radius: 50%; /* Make it round */
+}
+
+.home-imgHover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+
+    border-radius: 50%; /* Make it round */
+}
+
+.home-imgHover:hover {
+    background: #191919;
+    opacity: .8;
+}
+
+
+
+/* KEYFRAMES ANIMATION */
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideSci {
+    0% {
+        transform: translateX(100px) rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
